@@ -104,7 +104,7 @@ pub fn process_execute_multisig_proposal(
         }
         Some(ProposalType::WithdrawSol) => {
             // withdraw SOL
-            // check the source account is the squad sol_acccount
+            // check the source account is the squad sol_account
             if source_account.key != &squad_account_info.sol_account {
                 return Err(ProgramError::InvalidInstructionData);
             }
